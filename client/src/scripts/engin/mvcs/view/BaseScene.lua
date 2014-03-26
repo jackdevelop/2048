@@ -41,8 +41,9 @@ function BaseScene:ctor(param)
 
 
 	--播放场景的背景音乐
-	audio.playBackgroundMusic(self.sceneSound_);
-	
+	if self.sceneSound_ then
+		audio.playBackgroundMusic(self.sceneSound_);
+	end
 	
 	-- mapLayer 包含地图的整个视图
     self.mapLayer = display.newNode()
