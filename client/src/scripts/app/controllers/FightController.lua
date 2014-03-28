@@ -40,7 +40,7 @@ end
 function FightController:init()
 --	local tile = {
 --	  positon= 0, -- 0-15
---	  number= 0, -- 这个格子显示的数字. 0表示灰的
+--	  number_= 0, -- 这个格子显示的数字. 0表示灰的
 --	  steps= 0  -- 0-3 经过计算这个格子移动的距离
 --	};
 	--[[
@@ -69,13 +69,13 @@ function FightController:init()
 	local num = math.random(1, 16);
 	local object = self.model_:getObject("static:"..num);
 	object:setButtonLabel(2);
---	self.tiles_[num].number = 2;
+--	self.tiles_[num].number_ = 2;
 	
 	local num2 = num + math.random(1, 15);
 	if num2 > 16 then num2 = num2 - 16 end;
 	local object = self.model_:getObject("static:"..num2);
 	object:setButtonLabel(2);
---	self.tiles_[num2].number = 2;
+--	self.tiles_[num2].number_ = 2;
 --transition.moveTo(object.sprite1_, {x=10   ,y = 500,time = 0.2 })
 	
 end
@@ -89,7 +89,7 @@ function FightController:createNewTile()
 		local index = math.random(1, #empTiles);
 		local oneTile = empTiles[index];
 		if oneTile then
-			oneTile.number = 2;
+			oneTile.number_ = 2;
 			oneTile:setButtonLabel(oneTile.number);
 		end
 	end
@@ -208,27 +208,28 @@ function FightController:mergeTile(source, target, step)
 end
 
 
-function FightController:movingTile(tile, moveFlag,step)
+function FightController:movingTile(tile, moveFlag,step,onComplete)
   step = toint(step);
   echoj("位置：",tile.positon_,"移动步数：",step);
   
   
   local len = step * 90;
   local sprite = tile.sprite_;
-  if not sprite or step == 0  then return end
+--  if not sprite or step == 0  then 
+  	if onComplete then onComplete(); end
+  	return 
+--  end
   
   
-  if FightController.Left == moveFlag then
-  		transition.moveTo(sprite, {x=tile.x_ - len,y = tile.y_,time = 0.2 })
-  elseif FightController.Right == moveFlag then
-  		transition.moveTo(sprite, {x=tile.x_ + len,y = tile.y_,time = 0.2 })
-   elseif FightController.Up == moveFlag then
-  
-  elseif FightController.Down == moveFlag then
-  		
-  end
---  local position = tonum(tile.positon);
---  local x,y = toint(position%4)*90, math.floor(position/4)*90;
+--  if FightController.Left == moveFlag then
+--  		transition.moveTo(sprite, {x=tile.x_ - len,y = tile.y_,time = 0.2 ,onComplete = onComplete})
+--  elseif FightController.Right == moveFlag then
+--  		transition.moveTo(sprite, {x=tile.x_ + len,y = tile.y_,time = 0.2 ,onComplete = onComplete})
+--   elseif FightController.Up == moveFlag then
+--  
+--  elseif FightController.Down == moveFlag then
+--  		
+--  end
 end
 
 
@@ -278,8 +279,10 @@ function FightController:moveLeft()
 --        for (k=1; k<=3-j; k++) do
          for k = 1, 3-j, 1 do
           if(tiles[p+k+1].number_ ~= 0) then
-          	self:movingTile(tiles[p+k+1],FightController.Left, k);
---            self:mergeTile(tiles[p+1], tiles[p+k+1]);
+--          	self:movingTile(tiles[p+k+1],FightController.Left, k,function()
+          		 self:mergeTile(tiles[p+1], tiles[p+k+1]);
+--          	end);
+--           
             isMoved = true
           end
           if (tiles[p+1].number ~= 0) then break end;
@@ -291,8 +294,11 @@ function FightController:moveLeft()
 --        for (k=1; k<=3-j; k++){
        	 for k = 1, 3-j, 1 do
           if(tiles[p+k+1].number_ == tiles[p+1].number_) then
-          	 self:movingTile(tiles[p+k+1],FightController.Left, k);
---            self:mergeTile(tiles[p+1], tiles[p+k+1]);
+--          	 self:movingTile(tiles[p+k+1],FightController.Left, k,function()
+          	 	 self:mergeTile(tiles[p+1], tiles[p+k+1]);
+          	 	
+--          	 end);
+           
             isMoved = true
             break
           end
@@ -326,24 +332,24 @@ function FightController:moveRight()
       local p = i+j;
       -- 1 如果这个格子是空格子。 向左搜索找到非空的格子移到此格子里
       -- 2 如果这个格子不是空格子。向左搜索找到非空的格子且数字相同的格子进行合并
-      if(tiles[p+1].number == 0) then
+      if(tiles[p+1].number_ == 0) then
 --        for (k=1; k<=3-j; k++){
         for k = 1, j, 1 do
-          if(tiles[p-k+1].number ~= 0) then
+          if(tiles[p-k+1].number_ ~= 0) then
           	 self:movingTile(tiles[p-k+1], k+1);
             self:mergeTile(tiles[p+1], tiles[p-k+1]);
             isMoved = true
           end
           
-           if (tiles[p+1].number ~= 0) then break end;
+           if (tiles[p+1].number_ ~= 0) then break end;
         end
       end
 
       -- 移动空格子之后 再判断此格子是否为空 并进行合并操作
-      if (tiles[p+1].number ~= 0) then
+      if (tiles[p+1].number_ ~= 0) then
 --      for (k=1; k<=3-j; k++){
         for k = 1, j, 1 do 
-          if(tiles[p-k+1].number == tiles[p+1].number) then
+          if(tiles[p-k+1].number_ == tiles[p+1].number_) then
           	self:movingTile(tiles[p-k+1], k+1);
             self:mergeTile(tiles[p+1], tiles[p-k+1]);
             isMoved = true
@@ -387,23 +393,23 @@ function FightController:moveDown()
       local p = i+j;
 --      -- 1 如果这个格子是空格子。 向下搜索找到非空的格子移到此格子里
 --      -- 2 如果这个格子不是空格子。向下搜索找到非空的格子且数字相同的格子进行合并
-      if(tiles[p+1].number == 0) then
+      if(tiles[p+1].number_ == 0) then
         for k=4, 16-j-1,4 do
-          if(tiles[p+k+1].number ~= 0) then
+          if(tiles[p+k+1].number_ ~= 0) then
           
           self:movingTile(tiles[p+k+1], k+1);
             self:mergeTile(tiles[p+1], tiles[p+k+1]);
             
             isMoved = true
           end
-          if (tiles[p+1].number ~= 0) then break end;
+          if (tiles[p+1].number_ ~= 0) then break end;
         end
       end
  
       -- 移动空格子之后 再判断此格子是否为空 并进行合并操作
-      if (tiles[p+1].number ~= 0) then
+      if (tiles[p+1].number_ ~= 0) then
         for k=4, 16-j-1, 4 do
-          if(tiles[p+k+1].number == tiles[p+1].number) then
+          if(tiles[p+k+1].number_ == tiles[p+1].number_) then
           
           self:movingTile(tiles[p+k+1], k+1);
             self:mergeTile(tiles[p+1], tiles[p+k+1]);
@@ -444,25 +450,25 @@ function FightController:moveUp()
       local p = i+j;
       --1 如果这个格子是空格子。 向下搜索找到非空的格子移到此格子里
       -- 2 如果这个格子不是空格子。向下搜索找到非空的格子且数字相同的格子进行合并
-      if(tiles[p+1].number == 0)then
+      if(tiles[p+1].number_ == 0)then
        for k = 4, j, 4 do
 --        for (k=4; k<=j; k+=4){ // 0325
-          if(tiles[p-k+1].number ~= 0)then
+          if(tiles[p-k+1].number_ ~= 0)then
            self:movingTile(tiles[p-k+1], k+1);
             self:mergeTile(tiles[p+1], tiles[p-k+1]);
            
             isMoved = true
           end
           
-           if (tiles[p+1].number ~= 0) then break end;
+           if (tiles[p+1].number_ ~= 0) then break end;
         end
       end
  
       -- 移动空格子之后 再判断此格子是否为空 并进行合并操作
-      if (tiles[p+1].number ~= 0) then
+      if (tiles[p+1].number_ ~= 0) then
 --        for (k=4; k<=j; k+=4){ // 0325
         for k = 4, j, 4 do
-          if(tiles[p-k+1].number == tiles[p+1].number) then
+          if(tiles[p-k+1].number_ == tiles[p+1].number_) then
           self:movingTile(tiles[p-k+1], k+1);
             self:mergeTile(tiles[p+1], tiles[p-k+1]);
             

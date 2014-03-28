@@ -96,13 +96,13 @@ function ObjectViewBehavior:bind(object)
 	 	
 	 	
 	 	
-		if number == 0 then 
-			if object.sprite_ then
-				object.sprite_:removeSelf();
-				object.sprite_ =  nil;
-			end
-			return 
-		end;
+--		if toint(number) == 0 then 
+--			if object.sprite_ then
+--				object.sprite_:removeSelf();
+--				object.sprite_ =  nil;
+--			end
+--			return 
+--		end;
 		
 		
 --		if not object.sprite1_ then
@@ -121,11 +121,14 @@ function ObjectViewBehavior:bind(object)
 		
 --		
 --	 	
-	 	local loginButtonParam = {
-		    on ="image/Button02.png",
-		}
+	 
 		
 		if not object.sprite_  then
+		
+		
+			local loginButtonParam = {
+		    on ="image/Button02.png",
+		}
 	 	object.sprite_ =  cc.ui.UICheckBoxButton.new(loginButtonParam)
 	 	
 	        :setButtonLabel(cc.ui.UILabel.new({text = number, size = 24,  color = display.COLOR_WHITE}))
@@ -225,6 +228,8 @@ function ObjectViewBehavior:bind(object)
 --	    if object.scale_ then
 --	        object.sprite_:setScale(self.scale_)
 --	    end
+
+		object:setButtonLabel(0);
     end
     object:bindMethod(self, "createView", createView)
 

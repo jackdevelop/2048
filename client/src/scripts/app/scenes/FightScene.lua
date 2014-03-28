@@ -103,24 +103,28 @@ function FightScene:onTouch(event, x, y)
 		local radians = Math2d.radians4point(self.startX_, self.startY_, x, y);--弧度
 		
 		if radians > -0.5 and radians < 0.5 then --向右
+		 echoj("向右");
 			local flag = self.sceneController_:moveRight();
 			if flag then 
 				self.sceneController_:createNewTile()
 			end
 			
 		elseif radians > 1 and radians < 2 then --向下
+		 echoj("向下");
 			local flag = self.sceneController_:moveDown();
 			if flag then 
 				self.sceneController_:createNewTile()
 			end
 			
 		elseif radians > -2.5 and radians < -1 then --向上
+		 echoj("向上");
 			local flag = self.sceneController_:moveUp();
 			if flag then 
 				self.sceneController_:createNewTile()
 			end
 			
 		elseif radians > 2.5 or radians < -2.5 then --向左
+		 echoj("向左");
 			local flag = self.sceneController_:moveLeft();
 			if flag then 
 				self.sceneController_:createNewTile()
