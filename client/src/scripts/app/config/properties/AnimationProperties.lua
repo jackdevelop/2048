@@ -19,60 +19,39 @@ local defines = {}
 
 
 ----静态的图片
---local decoration = {
---    imageName = {"#bullet19_01.png"}, --图片的名称
---    offsetX   = {0}, --图像的横向偏移量，默认值为 0
---    offsetY   = {0},-- 图像的纵向偏移量，默认值为 0
---    visible   = true,--是否显示
---    zorder       = 0,
---}
---defines["towerShadow"] = decoration
+local decoration = {
+    imageName = {"image/Button02.png"}, --图片的名称
+    offsetX   = {0}, --图像的横向偏移量，默认值为 0
+    offsetY   = {0},-- 图像的纵向偏移量，默认值为 0
+    visible   = true,--是否显示
+    zorder       = 0,
+}
+defines["tile"] = decoration
 
 
 --飞机动画
-local decoration = {
-    framesName      = "p1_cart%03d_png.png",
-    framesBegin     = 1,            -- 从 ShipWaveUp0001.png 开始
-    framesLength    = 32,           -- 一共有 16 帧
-    framesTime      = 1/30,     -- 播放速度为每秒 20 帧
-
-    -- 以下为都为可选设定
-    zorder          = 0,            -- 在被装饰对象的 ZOrder 基础上 +1，默认值为 0
-    playForever     = true,         -- 是否循环播放，默认值为 false
-    autoplay        = false,         -- 是否自动开始播放，默认值为 false
-    removeAfterPlay = false,        -- 播放一次后自动删除，仅当 playForever = false 时有效，默认值为 false
-    hideAfterPlay   = false,        -- 播放一次后隐藏，仅当 playForever = false 时有效，默认值为 false
-    visible         = true,         -- 是否默认可见，默认值为 true
-    offsetX         = 0,            -- 图像的横向偏移量，默认值为 0
-    offsetY         = 0,           -- 图像的纵向偏移量，默认值为 0
-    scale 			= 1,
-    delay			= 0,
-}
-defines["p1_cart"] = decoration
-
-
-
---降落伞动画
-local decoration = {
-    framesName      = "balloon%03d_png.png",
-    framesBegin     = 1,            -- 从 ShipWaveUp0001.png 开始
-    framesLength    = 20,           -- 一共有 16 帧
-    framesTime      = 1/10,     -- 播放速度为每秒 20 帧
+--local decoration = {
+--    framesName      = "p1_cart%03d_png.png",
+--    framesBegin     = 1,            -- 从 ShipWaveUp0001.png 开始
+--    framesLength    = 32,           -- 一共有 16 帧
+--    framesTime      = 1/30,     -- 播放速度为每秒 20 帧
+--
+--    -- 以下为都为可选设定
+--    zorder          = 0,            -- 在被装饰对象的 ZOrder 基础上 +1，默认值为 0
+--    playForever     = true,         -- 是否循环播放，默认值为 false
+--    autoplay        = false,         -- 是否自动开始播放，默认值为 false
+--    removeAfterPlay = false,        -- 播放一次后自动删除，仅当 playForever = false 时有效，默认值为 false
+--    hideAfterPlay   = false,        -- 播放一次后隐藏，仅当 playForever = false 时有效，默认值为 false
+--    visible         = true,         -- 是否默认可见，默认值为 true
+--    offsetX         = 0,            -- 图像的横向偏移量，默认值为 0
+--    offsetY         = 0,           -- 图像的纵向偏移量，默认值为 0
+--    scale 			= 1,
+--    delay			= 0,
+--}
+--defines["p1_cart"] = decoration
 
 
-    -- 以下为都为可选设定
-    zorder          = 0,            -- 在被装饰对象的 ZOrder 基础上 +1，默认值为 0
-    playForever     = false,         -- 是否循环播放，默认值为 false
-    autoplay        = false,         -- 是否自动开始播放，默认值为 false
-    removeAfterPlay = false,        -- 播放一次后自动删除，仅当 playForever = false 时有效，默认值为 false
-    hideAfterPlay   = false,        -- 播放一次后隐藏，仅当 playForever = false 时有效，默认值为 false
-    visible         = true,         -- 是否默认可见，默认值为 true
-    offsetX         = 0,            -- 图像的横向偏移量，默认值为 0
-    offsetY         = 0,           -- 图像的纵向偏移量，默认值为 0
-    scale 			= 1,
-    delay			= 0,
-}
-defines["balloon"] = decoration
+
 
 
 
