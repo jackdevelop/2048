@@ -257,62 +257,6 @@ end
 
 
 
--- 用户按方向键左键或者向左滑动触摸屏。所有数字向左移动
-function FightController:moveRight()
-  -- 格子有移动或者合并则返回 true
-  -- 格子没有移动或者合并则返回 false
-	
---	  local tiles = self.tiles_;
-	  local tiles = self.model_:getObjectsByClassId("static");
---  local empTiles = self:emptyTiles()
-  local isMoved = false;
-
-  -- 四列同时进行。注意这里 i+=4
---  for (i=0; i<16; i+=4){
---    for (i=0; i<16; i+=4){
-     for i = 0, 15, 4 do
-    -- 从第一个格子到第三个格子进行计算
---    for (j=0; j<3; j++){
-    for j = 0, 2, 1 do
-      local p = i+j;
-      -- 1 如果这个格子是空格子。 向右搜索找到非空的格子移到此格子里
-      -- 2 如果这个格子不是空格子。向右搜索找到非空的格子且数字相同的格子进行合并
-      if(tiles[p+1].number_ == 0) then
---        for (k=1; k<=3-j; k++) do
-         for k = 1, 3-j, 1 do
-          if(tiles[p+k+1].number_ ~= 0) then
---          	self:movingTile(tiles[p+k+1],FightController.Left, k,function()
-          		 self:mergeTile(tiles[p+1], tiles[p+k+1]);
---          	end);
---           
-            isMoved = true
-          end
-          if (tiles[p+1].number ~= 0) then break end;
-        end
-      end
-
-      -- 移动空格子之后 再判断此格子是否为空 并进行合并操作
-      if (tiles[p +1 ].number_ ~= 0) then
---        for (k=1; k<=3-j; k++){
-       	 for k = 1, 3-j, 1 do
-          if(tiles[p+k+1].number_ == tiles[p+1].number_) then
---          	 self:movingTile(tiles[p+k+1],FightController.Left, k,function()
-          	 	 self:mergeTile(tiles[p+1], tiles[p+k+1]);
-          	 	
---          	 end);
-           
-            isMoved = true
-            break
-          end
-        end
-      end
-
-
-    end-- // for (j=0; j<3; i++){
-  end-- // for (i=0; i<16; i+=4){
-
-  return isMoved;
-end
 
 
 

@@ -21,64 +21,295 @@ LOAD LUA FILE: F:/workspace/lua/2048/client/src//scripts/main.lua
 ------------------------------------------------
 lua_loadChunksFromZIP() - load zip file: F:\workspace\lua\2048\client\src\res/script/framework_precompiled.zip
 lua_loadChunksFromZIP() - loaded chunks count: 54
-[0.1312] [INFO] 
-[0.1315] [INFO] # DEBUG                        = 1
-[0.1320] [INFO] #
-[0.1325] [INFO] # device.platform              = windows
-[0.1328] [INFO] # device.model                 = unknown
-[0.1332] [INFO] # device.language              = cn
-[0.1336] [INFO] # device.writablePath          = F:\workspace\lua\2048\client\src\\
-[0.1344] [INFO] # device.cachePath             = F:\workspace\lua\2048\client\src\\
-[0.1352] [INFO] # device.directorySeparator    = \
-[0.1355] [INFO] # device.pathSeparator         = ;
-[0.1359] [INFO] #
-[0.1386] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
-[0.1390] [INFO] # CONFIG_SCREEN_WIDTH          = 960.00
-[0.1396] [INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
-[0.1400] [INFO] # display.widthInPixels        = 960.00
-[0.1405] [INFO] # display.heightInPixels       = 640.00
-[0.1410] [INFO] # display.contentScaleFactor   = 1.00
-[0.1416] [INFO] # display.width                = 960.00
-[0.1424] [INFO] # display.height               = 640.00
-[0.1448] [INFO] # display.cx                   = 480.00
-[0.1460] [INFO] # display.cy                   = 320.00
-[0.1469] [INFO] # display.left                 = 0.00
-[0.1473] [INFO] # display.right                = 960.00
-[0.1478] [INFO] # display.top                  = 640.00
-[0.1483] [INFO] # display.bottom               = 0.00
-[0.1487] [INFO] # display.c_left               = -480.00
-[0.1491] [INFO] # display.c_right              = 480.00
-[0.1495] [INFO] # display.c_top                = 320.00
-[0.1500] [INFO] # display.c_bottom             = -320.00
-[0.1503] [INFO] #
-[0.1906] [INFO] Scene "BaseScene:onEnter()"
-[1.7059] 加载进度：, 50
-[1.7225] 加载进度：, 100
-[1.8913] [INFO] Scene "BaseScene:onExit()"
-[1.8944] [INFO] ----------------------------------------
-[1.8948] [INFO] LUA VM MEMORY USED: 2163.47 KB
+[0.1631] [INFO] 
+[0.1640] [INFO] # DEBUG                        = 1
+[0.1648] [INFO] #
+[0.1654] [INFO] # device.platform              = windows
+[0.1658] [INFO] # device.model                 = unknown
+[0.1667] [INFO] # device.language              = cn
+[0.1676] [INFO] # device.writablePath          = F:\workspace\lua\2048\client\src\\
+[0.1688] [INFO] # device.cachePath             = F:\workspace\lua\2048\client\src\\
+[0.1698] [INFO] # device.directorySeparator    = \
+[0.1702] [INFO] # device.pathSeparator         = ;
+[0.1707] [INFO] #
+[0.1732] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
+[0.1737] [INFO] # CONFIG_SCREEN_WIDTH          = 960.00
+[0.1744] [INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
+[0.1749] [INFO] # display.widthInPixels        = 960.00
+[0.1756] [INFO] # display.heightInPixels       = 640.00
+[0.1774] [INFO] # display.contentScaleFactor   = 1.00
+[0.1780] [INFO] # display.width                = 960.00
+[0.1786] [INFO] # display.height               = 640.00
+[0.1792] [INFO] # display.cx                   = 480.00
+[0.1797] [INFO] # display.cy                   = 320.00
+[0.1807] [INFO] # display.left                 = 0.00
+[0.1815] [INFO] # display.right                = 960.00
+[0.1821] [INFO] # display.top                  = 640.00
+[0.1829] [INFO] # display.bottom               = 0.00
+[0.1842] [INFO] # display.c_left               = -480.00
+[0.1853] [INFO] # display.c_right              = 480.00
+[0.1860] [INFO] # display.c_top                = 320.00
+[0.1867] [INFO] # display.c_bottom             = -320.00
+[0.1872] [INFO] #
+[0.2411] [INFO] Scene "BaseScene:onEnter()"
+[1.7616] 加载进度：, 50
+[1.7783] 加载进度：, 100
+[1.9542] [INFO] Scene "BaseScene:onExit()"
+[1.9546] [INFO] ----------------------------------------
+[1.9555] [INFO] LUA VM MEMORY USED: 2157.37 KB
 cocos2d: "cc_fps_images" rc=4 id=2 256 x 32 @ 16 bpp => 16 KB
 cocos2d: "F:\workspace\lua\2048\client\src\\res/image/Button02.png" rc=177 id=1 88 x 78 @ 32 bpp => 26 KB
 cocos2d: "cc_2x2_white_image" rc=2 id=3 2 x 2 @ 32 bpp => 0 KB
 cocos2d: CCTextureCache dumpDebugInfo: 3 textures, for 42 KB (0.04 MB)
-[1.8981] [INFO] ----------------------------------------
-[1.8997] [INFO] Scene "BaseScene:onEnter()"
-[2.6629] 向右
-[2.6650] 位置：, 0, 移动步数：, 0
-[2.6656] 创建新的格子, 14
-[2.6666] 创建新的格子, nil
-[4.1168] 向右
-[4.1182] 位置：, 0, 移动步数：, 0
-[4.1188] 创建新的格子, 14
-[4.1196] 创建新的格子, nil
-[5.9943] [INFO] Scene "BaseScene:onExit()"
-[5.9950] [INFO] ----------------------------------------
-[5.9961] [INFO] LUA VM MEMORY USED: 2180.49 KB
+[1.9582] [INFO] ----------------------------------------
+[1.9604] [INFO] Scene "BaseScene:onEnter()"
+[4.2452] 向下
+[4.2457] 位置：, 9, 移动步数：, 0
+[4.2480] 创建新的格子, 14
+[4.2485] 创建新的格子, nil
+[5.7803] 向下
+[5.7808] 位置：, 13, 移动步数：, 0
+[5.7828] 创建新的格子, 14
+[5.7835] 创建新的格子, nil
+[6.6835] 向上
+[6.6842] 位置：, 6, 移动步数：, 0
+[6.6860] 位置：, 1, 移动步数：, 0
+[6.6877] 位置：, 0, 移动步数：, 0
+[6.6907] 创建新的格子, 13
+[6.6914] 创建新的格子, nil
+[7.7568] 向下
+[7.7572] 位置：, 14, 移动步数：, 0
+[7.7591] 位置：, 5, 移动步数：, 0
+[7.7610] 位置：, 13, 移动步数：, 0
+[7.7625] 位置：, 12, 移动步数：, 0
+[7.7638] 创建新的格子, 12
+[7.7643] 创建新的格子, nil
+[8.8705] 向上
+[8.8709] 位置：, 2, 移动步数：, 0
+[8.8[170.2381] [INFO] LUA VM MEMORY USED: 2171.03 KB
+[180.2413] [INFO] LUA VM MEMORY USED: 2171.13 KB
+[190.2416] [INFO] LUA VM MEMORY USED: 2171.23 KB
+[200.2435] [INFO] LUA VM MEMORY USED: 2171.33 KB
+[210.2440] [INFO] LUA VM MEMORY USED: 2171.43 KB
+[220.2443] [INFO] LUA VM MEMORY USED: 2171.53 KB
+[230.2444] [INFO] LUA VM MEMORY USED: 2171.63 KB
+[240.2444] [INFO] LUA VM MEMORY USED: 2171.72 KB
+[250.2592] [INFO] LUA VM MEMORY USED: 2171.82 KB
+[260.2707] [INFO] LUA VM MEMORY USED: 2171.92 KB
+[270.2708] [INFO] LUA VM MEMORY USED: 2172.02 KB
+[280.2714] [INFO] LUA VM MEMORY USED: 2172.12 KB
+[290.2716] [INFO] LUA VM MEMORY USED: 2172.22 KB
+[300.2719] [INFO] LUA VM MEMORY USED: 2172.32 KB
+[310.2720] [INFO] LUA VM MEMORY USED: 2172.42 KB
+[320.2722] [INFO] LUA VM MEMORY USED: 2172.51 KB
+[330.2725] [INFO] LUA VM MEMORY USED: 2172.61 KB
+[340.2725] [INFO] LUA VM MEMORY USED: 2172.71 KB
+[350.2728] [INFO] LUA VM MEMORY USED: 2172.81 KB
+[360.2730] [INFO] LUA VM MEMORY USED: 2172.91 KB
+[370.2730] [INFO] LUA VM MEMORY USED: 2173.01 KB
+[380.2731] [INFO] LUA VM MEMORY USED: 2173.11 KB
+[390.2739] [INFO] LUA VM MEMORY USED: 2173.20 KB
+[400.2755] [INFO] LUA VM MEMORY USED: 2173.30 KB
+[410.2759] [INFO] LUA VM MEMORY USED: 2173.40 KB
+[420.2834] [INFO] LUA VM MEMORY USED: 2173.50 KB
+[430.2838] [INFO] LUA VM MEMORY USED: 2173.60 KB
+[440.2864] [INFO] LUA VM MEMORY USED: 2173.70 KB
+[450.2866] [INFO] LUA VM MEMORY USED: 2173.80 KB
+[460.2873] [INFO] LUA VM MEMORY USED: 2173.89 KB
+[470.2917] [INFO] LUA VM MEMORY USED: 2173.99 KB
+[480.3050] [INFO] LUA VM MEMORY USED: 2174.09 KB
+[490.3124] [INFO] LUA VM MEMORY USED: 2174.19 KB
+[500.3165] [INFO] LUA VM MEMORY USED: 2174.29 KB
+[510.3253] [INFO] LUA VM MEMORY USED: 2174.39 KB
+[520.3254] [INFO] LUA VM MEMORY USED: 2174.49 KB
+[530.3254] [INFO] LUA VM MEMORY USED: 2174.58 KB
+[540.3333] [INFO] LUA VM MEMORY USED: 2174.68 KB
+2935] [INFO] LUA VM MEMORY USED: 2208.47 KB
+[380.2936] [INFO] LUA VM MEMORY USED: 2208.56 KB
+[390.2940] [INFO] LUA VM MEMORY USED: 2208.66 KB
+[400.2941] [INFO] LUA VM MEMORY USED: 2208.76 KB
+[410.2944] [INFO] LUA VM MEMORY USED: 2208.86 KB
+[420.3063] [INFO] LUA VM MEMORY USED: 2208.96 KB
+[430.3094] [INFO] LUA VM MEMORY USED: 2209.06 KB
+[440.3103] [INFO] LUA VM MEMORY USED: 2209.16 KB
+[450.3137] [INFO] LUA VM MEMORY USED: 2209.25 KB
+[460.3159] [INFO] LUA VM MEMORY USED: 2209.35 KB
+[470.3304] [INFO] LUA VM MEMORY USED: 2209.45 KB
+[480.3317] [INFO] LUA VM MEMORY USED: 2209.55 KB
+[490.3337] [INFO] LUA VM MEMORY USED: 2209.65 KB
+[500.3340] [INFO] LUA VM MEMORY USED: 2209.75 KB
+[510.3364] [INFO] LUA VM MEMORY USED: 2209.85 KB
+[520.3369] [INFO] LUA VM MEMORY USED: 2209.95 KB
+[530.3440] [INFO] LUA VM MEMORY USED: 2210.04 KB
+383] 创建新的格子, 9
+[20.4388] 创建新的格子, nil
+[22.0880] 向上
+[22.0884] 位置：, 7, 移动步数：, 0
+[22.0904] 位置：, 3, 移动步数：, 0
+[22.0918] 位置：, 6, 移动步数：, 0
+[22.0946] 位置：, 2, 移动步数：, 0
+[22.0980] 位置：, 5, 移动步数：, 0
+[22.1001] 位置：, 1, 移动步数：, 0
+[22.1021] 位置：, 0, 移动步数：, 0
+[22.1035] 创建新的格子, 9
+[22.1039] 创建新的格子, nil
+[23.1714] 向下
+[23.1718] 位置：, 11, 移动步数：, 0
+[23.1739] 位置：, 15, 移动步数：, 0
+[23.1761] 位置：, 14, 移动步数：, 0
+[23.1782] 位置：, 10, 移动步数：, 0
+[23.1805] 位置：, 9, 移动步数：, 0
+[23.1818] 位置：, 13, 移动步数：, 0
+[23.1836] 位置：, 12, 移动步数：, 0
+[23.1857] 创建新的格子, 9
+[23.1862] 创建新的格子, nil
+[24.2150] 向上
+[24.2154] 位置：, 7, 移动步数：, 0
+[24.2171] 位置：, 3, 移动步数：, 0
+[24.2190] 位置：, 10, 移动步数：, 0
+[24.2204] 位置：, 6, 移动步数：, 0
+[24.2217] 位置：, 2, 移动步数：, 0
+[24.2230] 位置：, 5, 移动步数：, 0
+[24.2255] 位置：, 1, 移动步数：, 0
+[24.2278] 位置：, 0, 移动步数：, 0
+[24.2302] 创建新的格子, 9
+[24.2306] 创建新的格子, nil
+[25.4893] 向下
+[25.4897] 位置：, 11, 移动步数：, 0
+[25.4914] 位置：, 15, 移动步数：, 0
+[25.4949] 位置：, 10, 移动步数：, 0
+[25.4976] 位置：, 14, 移动步数：, 0
+[25.4990] 位置：, 5, 移动步数：, 0
+[25.5003] 位置：, 13, 移动步数：, 0
+[25.5021] 位置：, 9, 移动步数：, 0
+[25.5037] 位置：, 12, 移动步数：, 0
+[25.5052] 创建新的格子, 9
+[25.5057] 创建新的格子, nil
+[27.1969] 向上
+[27.1976] 位置：, 7, 移动步数：, 0
+[27.1994] 位置：, 3, 移动步数：, 0
+[27.2006] 位置：, 6, 移动步数：, 0
+[27.2025] 位置：, 2, 移动步数：, 0
+[27.2037] 位置：, 5, 移动步数：, 0
+[27.2050] 位置：, 1, 移动步数：, 0
+[27.2061] 位置：, 4, 移动步数：, 0
+[27.2072] 位置：, 0, 移动步数：, 0
+[27.2086] 创建新的格子, 9
+[27.2096] 创建新的格子, nil
+[28.2901] 向下
+[28.2904] 位置：, 11, 移动步数：, 0
+[28.2928] 位置：, 15, 移动步数：, 0
+[28.2967] 位置：, 10, 移动步数：, 0
+[28.2980] 位置：, 14, 移动步数：, 0
+[28.2993] 位置：, 9, 移动步数：, 0
+[28.3009] 位置：, 13, 移动步数：, 0
+[28.3029] 位置：, 4, 移动步数：, 0
+[28.3068] 位置：, 12, 移动步数：, 0
+[28.3099] 创建新的格子, 8
+[28.3107] 创建新的格子, nil
+[29.3736] 向上
+[29.3740] 位置：, 7, 移动步数：, 0
+[29.3769] 位置：, 3, 移动步数：, 0
+[29.3799] 位置：, 6, 移动步数：, 0
+[29.3812] 位置：, 2, 移动步数：, 0
+[29.3823] 位置：, 5, 移动步数：, 0
+[29.3843] 位置：, 1, 移动步数：, 0
+[29.3862] 位置：, 4, 移动步数：, 0
+[29.3873] 位置：, 0, 移动步数：, 0
+[29.3884] 创建新的格子, 7
+[29.3887] 创建新的格子, nil
+[30.2567] [INFO] LUA VM MEMORY USED: 2326.07 KB
+[30.4370] 向下
+[30.4375] 位置：, 15, 移动步数：, 0
+[30.4395] 位置：, 11, 移动步数：, 0
+[30.4411] 位置：, 10, 移动步数：, 0
+[30.4456] 位置：, 14, 移动步数：, 0
+[30.4477] 位置：, 5, 移动步数：, 0
+[30.4489] 位置：, 9, 移动步数：, 0
+[30.4501] 位置：, 13, 移动步数：, 0
+[30.4519] 位置：, 8, 移动步数：, 0
+[30.4533] 位置：, 12, 移动步数：, 0
+[30.4547] 创建新的格子, 7
+[30.4550] 创建新的格子, nil
+[31.4919] 向上
+[31.4929] 位置：, 7, 移动步数：, 0
+[31.4966] 位置：, 3, 移动步数：, 0
+[31.4980] 位置：, 6, 移动步数：, 0
+[31.4992] 位置：, 2, 移动步数：, 0
+[31.5007] 位置：, 9, 移动步数：, 0
+[31.5027] 位置：, 5, 移动步数：, 0
+[31.5041] 位置：, 1, 移动步数：, 0
+[31.5052] 位置：, 4, 移动步数：, 0
+[31.5064] 位置：, 0, 移动步数：, 0
+[31.5076] 创建新的格子, 7
+[31.5086] 创建新的格子, nil
+[32.8648] 向下
+[32.8655] 位置：, 11, 移动步数：, 0
+[32.8677] 位置：, 15, 移动步数：, 0
+[32.8697] 位置：, 10, 移动步数：, 0
+[32.8710] 位置：, 14, 移动步数：, 0
+[32.8726] 位置：, 5, 移动步数：, 0
+[32.8739] 位置：, 9, 移动步数：, 0
+[32.8783] 位置：, 13, 移动步数：, 0
+[32.8803] 位置：, 8, 移动步数：, 0
+[32.8816] 位置：, 12, 移动步数：, 0
+[32.8830] 创建新的格子, 7
+[32.8834] 创建新的格子, nil
+[36.5449] 向上
+[36.5453] 位置：, 7, 移动步数：, 0
+[36.5471] 位置：, 3, 移动步数：, 0
+[36.5483] 位置：, 6, 移动步数：, 0
+[36.5497] 位置：, 2, 移动步数：, 0
+[36.5511] 位置：, 9, 移动步数：, 0
+[36.5529] 位置：, 5, 移动步数：, 0
+[36.5540] 位置：, 1, 移动步数：, 0
+[36.5554] 位置：, 8, 移动步数：, 0
+[36.5570] 位置：, 4, 移动步数：, 0
+[36.5597] 位置：, 0, 移动步数：, 0
+[36.5619] 创建新的格子, 7
+[36.5624] 创建新的格子, nil
+[39.0843] 向下
+[39.0846] 位置：, 11, 移动步数：, 0
+[39.0878] 位置：, 15, 移动步数：, 0
+[39.0900] 位置：, 10, 移动步数：, 0
+[39.0934] 位置：, 14, 移动步数：, 0
+[39.0955] 位置：, 13, 移动步数：, 0
+[39.0972] 位置：, 8, 移动步数：, 0
+[39.0984] 位置：, 12, 移动步数：, 0
+[39.0997] 创建新的格子, 7
+[39.1001] 创建新的格子, nil
+[40.2681] [INFO] LUA VM MEMORY USED: 2364.75 KB
+[41.0632] 向上
+[41.0636] 位置：, 7, 移动步数：, 0
+[41.0647] 位置：, 3, 移动步数：, 0
+[41.0656] 位置：, 6, 移动步数：, 0
+[41.0664] 位置：, 2, 移动步数：, 0
+[41.0672] 位置：, 1, 移动步数：, 0
+[41.0681] 位置：, 4, 移动步数：, 0
+[41.0694] 位置：, 0, 移动步数：, 0
+[41.0712] 创建新的格子, 7
+[41.0720] 创建新的格子, nil
+[42.3272] 向下
+[42.3277] 位置：, 7, 移动步数：, 0
+[42.3291] 位置：, 11, 移动步数：, 0
+[42.3306] 位置：, 15, 移动步数：, 0
+[42.3320] 位置：, 10, 移动步数：, 0
+[42.3333] 位置：, 14, 移动步数：, 0
+[42.3343] 位置：, 5, 移动步数：, 0
+[42.3352] 位置：, 9, 移动步数：, 0
+[42.3365] 位置：, 13, 移动步数：, 0
+[42.3385] 位置：, 8, 移动步数：, 0
+[42.3414] 位置：, 12, 移动步数：, 0
+[42.3429] 创建新的格子, 7
+[42.3433] 创建新的格子, nil
+[43.6526] [INFO] Scene "BaseScene:onExit()"
+[43.6532] [INFO] ----------------------------------------
+[43.6536] [INFO] LUA VM MEMORY USED: 2382.69 KB
 cocos2d: "cc_fps_images" rc=4 id=2 256 x 32 @ 16 bpp => 16 KB
 cocos2d: "F:\workspace\lua\2048\client\src\\res/image/Button02.png" rc=177 id=1 88 x 78 @ 32 bpp => 26 KB
 cocos2d: "cc_2x2_white_image" rc=1 id=3 2 x 2 @ 32 bpp => 0 KB
 cocos2d: CCTextureCache dumpDebugInfo: 3 textures, for 42 KB (0.04 MB)
-[6.0013] [INFO] ----------------------------------------
+[43.6552] [INFO] ----------------------------------------
 cocos2d: CCTextureCache: texture: cc_fps_images
 cocos2d: CCTextureCache: texture: F:\workspace\lua\2048\client\src\\res/image/Button02.png
 cocos2d: CCTextureCache: texture: cc_2x2_white_image
