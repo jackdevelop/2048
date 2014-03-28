@@ -381,7 +381,7 @@ end
 
 
 --用户按方向键上键或者向上滑动触摸屏。所有数字向上移动
-function FightController:moveDown()
+function FightController:moveUp()
   -- 格子有移动或者合并则返回 true
   -- 格子没有移动或者合并则返回 false
    local tiles = self.model_:getObjectsByClassId("static");
@@ -437,7 +437,7 @@ end
 
 -- 用户按方向键下键或者向下滑动触摸屏。所有数字向下移动
 --var moveDown = function(){
-function FightController:moveUp()
+function FightController:moveDown()
   -- 格子有移动或者合并则返回 true
   -- 格子没有移动或者合并则返回 false
  
