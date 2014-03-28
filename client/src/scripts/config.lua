@@ -1,7 +1,7 @@
 
 -- 0 - disable debug info, 1 - less debug info, 2 - verbose debug info
 DEBUG = 1
-DEBUG_FPS = true
+DEBUG_FPS = false
 DEBUG_MEM = true
 
 -- design resolution
