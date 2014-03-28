@@ -21,49 +21,60 @@ LOAD LUA FILE: F:/workspace/lua/2048/client/src//scripts/main.lua
 ------------------------------------------------
 lua_loadChunksFromZIP() - load zip file: F:\workspace\lua\2048\client\src\res/script/framework_precompiled.zip
 lua_loadChunksFromZIP() - loaded chunks count: 54
-[0.1208] [INFO] 
-[0.1211] [INFO] # DEBUG                        = 1
-[0.1216] [INFO] #
-[0.1222] [INFO] # device.platform              = windows
-[0.1226] [INFO] # device.model                 = unknown
-[0.1231] [INFO] # device.language              = cn
-[0.1236] [INFO] # device.writablePath          = F:\workspace\lua\2048\client\src\\
-[0.1242] [INFO] # device.cachePath             = F:\workspace\lua\2048\client\src\\
-[0.1250] [INFO] # device.directorySeparator    = \
-[0.1256] [INFO] # device.pathSeparator         = ;
-[0.1261] [INFO] #
-[0.1285] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
-[0.1289] [INFO] # CONFIG_SCREEN_WIDTH          = 960.00
-[0.1295] [INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
-[0.1300] [INFO] # display.widthInPixels        = 960.00
-[0.1305] [INFO] # display.heightInPixels       = 640.00
-[0.1321] [INFO] # display.contentScaleFactor   = 1.00
-[0.1326] [INFO] # display.width                = 960.00
-[0.1330] [INFO] # display.height               = 640.00
-[0.1334] [INFO] # display.cx                   = 480.00
-[0.1338] [INFO] # display.cy                   = 320.00
-[0.1345] [INFO] # display.left                 = 0.00
-[0.1353] [INFO] # display.right                = 960.00
-[0.1358] [INFO] # display.top                  = 640.00
-[0.1364] [INFO] # display.bottom               = 0.00
-[0.1368] [INFO] # display.c_left               = -480.00
-[0.1374] [INFO] # display.c_right              = 480.00
-[0.1380] [INFO] # display.c_top                = 320.00
-[0.1384] [INFO] # display.c_bottom             = -320.00
-[0.1387] [INFO] #
-[0.1859] [INFO] Scene "BaseScene:onEnter()"
-[1.7012] 加载进度：, 50
-[1.7178] 加载进度：, 100
-[1.8869] [INFO] Scene "BaseScene:onExit()"
-[1.8874] [INFO] ----------------------------------------
-[1.8880] [INFO] LUA VM MEMORY USED: 1835.92 KB
+[0.1341] [INFO] 
+[0.1344] [INFO] # DEBUG                        = 1
+[0.1349] [INFO] #
+[0.1354] [INFO] # device.platform              = windows
+[0.1357] [INFO] # device.model                 = unknown
+[0.1361] [INFO] # device.language              = cn
+[0.1366] [INFO] # device.writablePath          = F:\workspace\lua\2048\client\src\\
+[0.1374] [INFO] # device.cachePath             = F:\workspace\lua\2048\client\src\\
+[0.1383] [INFO] # device.directorySeparator    = \
+[0.1387] [INFO] # device.pathSeparator         = ;
+[0.1391] [INFO] #
+[0.1416] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
+[0.1420] [INFO] # CONFIG_SCREEN_WIDTH          = 960.00
+[0.1425] [INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
+[0.1429] [INFO] # display.widthInPixels        = 960.00
+[0.1434] [INFO] # display.heightInPixels       = 640.00
+[0.1439] [INFO] # display.contentScaleFactor   = 1.00
+[0.1445] [INFO] # display.width                = 960.00
+[0.1450] [INFO] # display.height               = 640.00
+[0.1455] [INFO] # display.cx                   = 480.00
+[0.1463] [INFO] # display.cy                   = 320.00
+[0.1468] [INFO] # display.left                 = 0.00
+[0.1474] [INFO] # display.right                = 960.00
+[0.1479] [INFO] # display.top                  = 640.00
+[0.1500] [INFO] # display.bottom               = 0.00
+[0.1506] [INFO] # display.c_left               = -480.00
+[0.1510] [INFO] # display.c_right              = 480.00
+[0.1515] [INFO] # display.c_top                = 320.00
+[0.1520] [INFO] # display.c_bottom             = -320.00
+[0.1524] [INFO] #
+[0.2285] [INFO] Scene "BaseScene:onEnter()"
+[1.7546] 加载进度：, 50
+[1.7713] 加载进度：, 100
+[1.9431] [INFO] Scene "BaseScene:onExit()"
+[1.9436] [INFO] ----------------------------------------
+[1.9444] [INFO] LUA VM MEMORY USED: 2164.60 KB
 cocos2d: "cc_fps_images" rc=4 id=2 256 x 32 @ 16 bpp => 16 KB
 cocos2d: "F:\workspace\lua\2048\client\src\\res/image/Button02.png" rc=177 id=1 88 x 78 @ 32 bpp => 26 KB
 cocos2d: "cc_2x2_white_image" rc=2 id=3 2 x 2 @ 32 bpp => 0 KB
 cocos2d: CCTextureCache dumpDebugInfo: 3 textures, for 42 KB (0.04 MB)
-[1.8903] [INFO] ----------------------------------------
-[1.8924] [INFO] Scene "BaseScene:onEnter()"
-[3.9894] 向右
-[3.9900] 位置：, 11, 移动步数：, 0
-[3.9923] 位置：, 2, 移动步数：, 0
-[3.9937] 创建新的格子, 0
+[1.9470] [INFO] ----------------------------------------
+[1.9487] [INFO] Scene "BaseScene:onEnter()"
+[2.8496] 向左
+[2.8501] 创建新的格子, 15
+[2.8508] 创建新的格子, nil
+[5.4271] [INFO] Scene "BaseScene:onExit()"
+[5.4275] [INFO] ----------------------------------------
+[5.4280] [INFO] LUA VM MEMORY USED: 2178.27 KB
+cocos2d: "cc_fps_images" rc=4 id=2 256 x 32 @ 16 bpp => 16 KB
+cocos2d: "F:\workspace\lua\2048\client\src\\res/image/Button02.png" rc=177 id=1 88 x 78 @ 32 bpp => 26 KB
+cocos2d: "cc_2x2_white_image" rc=1 id=3 2 x 2 @ 32 bpp => 0 KB
+cocos2d: CCTextureCache dumpDebugInfo: 3 textures, for 42 KB (0.04 MB)
+[5.4308] [INFO] ----------------------------------------
+cocos2d: CCTextureCache: texture: cc_fps_images
+cocos2d: CCTextureCache: texture: F:\workspace\lua\2048\client\src\\res/image/Button02.png
+cocos2d: CCTextureCache: texture: cc_2x2_white_image
+cocos2d: CCTextureCache: removing unused texture: cc_2x2_white_image
