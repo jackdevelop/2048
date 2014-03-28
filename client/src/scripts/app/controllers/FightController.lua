@@ -92,7 +92,7 @@ function FightController:createNewTile()
 		if oneTile then
 			oneTile.number_ = 2;
 			echoj("创建新的格子",oneTile.postion_);
-			oneTile:setButtonLabel(oneTile.number);
+			oneTile:setButtonLabel(oneTile.number_);
 		end
 	end
 end
@@ -258,7 +258,7 @@ end
 
 
 -- 用户按方向键左键或者向左滑动触摸屏。所有数字向左移动
-function FightController:moveLeft()
+function FightController:moveRight()
   -- 格子有移动或者合并则返回 true
   -- 格子没有移动或者合并则返回 false
 	
@@ -318,7 +318,7 @@ end
 
 
 --用户按方向键右键或者向右滑动触摸屏。所有数字向右移动
-function FightController:moveRight()
+function FightController:moveLeft()
   -- 格子有移动或者合并则返回 true
   -- 格子没有移动或者合并则返回 false
 
