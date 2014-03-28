@@ -85,11 +85,13 @@ end
 --赋值新的
 function FightController:createNewTile()
 	local empTiles = self:emptyTiles();
+	echoj("创建新的格子",#empTiles);
 	if #empTiles>0 then 
 		local index = math.random(1, #empTiles);
 		local oneTile = empTiles[index];
 		if oneTile then
 			oneTile.number_ = 2;
+			echoj("创建新的格子",oneTile.postion_);
 			oneTile:setButtonLabel(oneTile.number);
 		end
 	end
@@ -105,7 +107,7 @@ function FightController:emptyTiles()
   	
   	local emptyTilesArr = {};
   	for k,v in pairs(tiles) do
-  		if v.number == 0 then
+  		if v.number_ == 0 then
 			emptyTilesArr[#emptyTilesArr+1] = v 
 		end
 	end

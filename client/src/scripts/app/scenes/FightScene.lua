@@ -124,9 +124,9 @@ function FightScene:onTouch(event, x, y)
 			end
 			
 		elseif radians > 2.5 or radians < -2.5 then --向左
-		 echoj("向左");
 			local flag = self.sceneController_:moveLeft();
 			if flag then 
+			 echoj("向左");
 				self.sceneController_:createNewTile()
 			end
 		end
