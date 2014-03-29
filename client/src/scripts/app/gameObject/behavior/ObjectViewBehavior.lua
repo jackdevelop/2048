@@ -96,13 +96,13 @@ function ObjectViewBehavior:bind(object)
 	 	
 	 	
 	 	
---		if toint(number) == 0 then 
---			if object.sprite_ then
---				object.sprite_:removeSelf();
---				object.sprite_ =  nil;
---			end
---			return 
---		end;
+		if toint(number) == 0 then 
+			if object.sprite_ then
+				object.sprite_:removeSelf();
+				object.sprite_ =  nil;
+			end
+			return 
+		end;
 		
 		
 --		if not object.sprite1_ then
@@ -229,7 +229,7 @@ function ObjectViewBehavior:bind(object)
 --	        object.sprite_:setScale(self.scale_)
 --	    end
 
-		object:setButtonLabel(0);
+--		object:setButtonLabel(0);
     end
     object:bindMethod(self, "createView", createView)
 

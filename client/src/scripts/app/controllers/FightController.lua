@@ -217,21 +217,21 @@ function FightController:movingTile(tile, moveFlag,step,onComplete)
   
   local len = step * 90;
   local sprite = tile.sprite_;
---  if not sprite or step == 0  then 
+  if not sprite or step == 0  then 
   	if onComplete then onComplete(); end
   	return 
---  end
+  end
   
   
---  if FightController.Left == moveFlag then
---  		transition.moveTo(sprite, {x=tile.x_ - len,y = tile.y_,time = 0.2 ,onComplete = onComplete})
---  elseif FightController.Right == moveFlag then
---  		transition.moveTo(sprite, {x=tile.x_ + len,y = tile.y_,time = 0.2 ,onComplete = onComplete})
---   elseif FightController.Up == moveFlag then
---  
---  elseif FightController.Down == moveFlag then
---  		
---  end
+  if FightController.Left == moveFlag then
+  		transition.moveTo(sprite, {x=tile.x_ - len,y = tile.y_,time = 0.4 ,onComplete = onComplete})
+  elseif FightController.Right == moveFlag then
+  		transition.moveTo(sprite, {x=tile.x_ + len,y = tile.y_,time = 0.4 ,onComplete = onComplete})
+   elseif FightController.Up == moveFlag then
+  transition.moveTo(sprite, {x=tile.x_ ,y = tile.y_ + len,time = 0.4 ,onComplete = onComplete})
+  elseif FightController.Down == moveFlag then
+  		transition.moveTo(sprite, {x=tile.x_ ,y = tile.y_ - len,time = 0.4 ,onComplete = onComplete})
+  end
 end
 
 
@@ -282,8 +282,10 @@ function FightController:moveRight()
        for k = 1, 3-j, 1 do
 --        for (k=1; k<=3-j; k++){
           if(tiles[p+k+1].number_ ~= 0) then
-            self:mergeTile(tiles[p+1], tiles[p+k+1]);
-            self:movingTile(tiles[p+k+1], k+1);
+           
+            self:movingTile(tiles[p+k+1],FightController.Right, k+1,function()
+            	 self:mergeTile(tiles[p+1], tiles[p+k+1]);
+            end);
             isMoved = true
           end
           
@@ -296,8 +298,9 @@ function FightController:moveRight()
 --        for (k=1; k<=3-j; k++) do
          for k = 1, 3-j, 1 do
           if(tiles[p+k+1].number_ == tiles[p+1].number_) then
-            self:mergeTile(tiles[p+1], tiles[p+k+1]);
-            self:movingTile(tiles[p+k+1], k+1);
+            self:movingTile(tiles[p+k+1],FightController.Right, k+1,function()
+            	self:mergeTile(tiles[p+1], tiles[p+k+1]);
+            end);
             isMoved = true
             break;
           end
@@ -336,8 +339,10 @@ function FightController:moveLeft()
 --        for (k=1; k<=3-j; k++){
         for k = 1, j, 1 do
           if(tiles[p-k+1].number_ ~= 0) then
-          	 self:movingTile(tiles[p-k+1], k+1);
-            self:mergeTile(tiles[p+1], tiles[p-k+1]);
+          	 self:movingTile(tiles[p-k+1],FightController.Left, k+1,function()
+            	self:mergeTile(tiles[p+1], tiles[p-k+1]);
+             end);
+             
             isMoved = true
           end
           
@@ -350,8 +355,10 @@ function FightController:moveLeft()
 --      for (k=1; k<=3-j; k++){
         for k = 1, j, 1 do 
           if(tiles[p-k+1].number_ == tiles[p+1].number_) then
-          	self:movingTile(tiles[p-k+1], k+1);
-            self:mergeTile(tiles[p+1], tiles[p-k+1]);
+          	self:movingTile(tiles[p-k+1],FightController.Left, k+1,function()
+          		 self:mergeTile(tiles[p+1], tiles[p-k+1]);
+          	end);
+           
             isMoved = true
             break
           end
@@ -397,8 +404,11 @@ function FightController:moveUp()
         for k=4, 16-j-1,4 do
           if(tiles[p+k+1].number_ ~= 0) then
           
-          self:movingTile(tiles[p+k+1], k+1);
-            self:mergeTile(tiles[p+1], tiles[p+k+1]);
+          self:movingTile(tiles[p+k+1],FightController.Up, k+1,function()
+          	  self:mergeTile(tiles[p+1], tiles[p+k+1]);
+          
+          end);
+          
             
             isMoved = true
           end
@@ -411,8 +421,11 @@ function FightController:moveUp()
         for k=4, 16-j-1, 4 do
           if(tiles[p+k+1].number_ == tiles[p+1].number_) then
           
-          self:movingTile(tiles[p+k+1], k+1);
-            self:mergeTile(tiles[p+1], tiles[p+k+1]);
+          self:movingTile(tiles[p+k+1],FightController.Up, k+1,function()
+          	 self:mergeTile(tiles[p+1], tiles[p+k+1]);
+          
+          end);
+           
             
             isMoved = true
             break
@@ -454,8 +467,11 @@ function FightController:moveDown()
        for k = 4, j, 4 do
 --        for (k=4; k<=j; k+=4){ // 0325
           if(tiles[p-k+1].number_ ~= 0)then
-           self:movingTile(tiles[p-k+1], k+1);
-            self:mergeTile(tiles[p+1], tiles[p-k+1]);
+           self:movingTile(tiles[p-k+1],FightController.Down, k+1,function()
+           	 self:mergeTile(tiles[p+1], tiles[p-k+1]);
+           
+           end);
+           
            
             isMoved = true
           end
@@ -469,8 +485,11 @@ function FightController:moveDown()
 --        for (k=4; k<=j; k+=4){ // 0325
         for k = 4, j, 4 do
           if(tiles[p-k+1].number_ == tiles[p+1].number_) then
-          self:movingTile(tiles[p-k+1], k+1);
-            self:mergeTile(tiles[p+1], tiles[p-k+1]);
+          self:movingTile(tiles[p-k+1],FightController.Down, k+1,function()
+          	 self:mergeTile(tiles[p+1], tiles[p-k+1]);
+          
+          end);
+           
             
             isMoved = true
             break; --// 0325 2
