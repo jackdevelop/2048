@@ -202,6 +202,11 @@ end
 
 
 function FightController:mergeTile(source, target, step)
+  if 	toint(target.number_) ~= toint(source.number_) then
+  echoj("有错误");
+  		return;
+  end
+	
   local sourceNumber = toint(target.number_) + toint(source.number_);
   target.number_ = 0;
   
