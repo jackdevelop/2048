@@ -108,6 +108,7 @@ mergeTile = function(source, target, step){
 
 movingTile = function(tile, step){
   tile.steps = step;
+  print(“移动步数：”，step);
 }
 
 
