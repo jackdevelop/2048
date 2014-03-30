@@ -93,6 +93,13 @@ function FightController:createNewTile()
 			oneTile.number_ = 2;
 			echoj("创建新的格子",oneTile.postion_);
 			oneTile:setButtonLabel(oneTile.number_);
+			
+			
+			--测试新各自
+			if self.flagSpt_ then self.flagSpt_:removeSelf() end
+			 self.flagSpt_=display.newCircle(5);
+	         self.flagSpt_ :align(display.LEFT_BOTTOM,30,30 )
+	        oneTile.sprite_ :addChild( self.flagSpt_);
 		end
 	end
 end
