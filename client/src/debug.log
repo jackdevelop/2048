@@ -21,75 +21,86 @@ LOAD LUA FILE: E:/workspace/2048/2048/client/src//scripts/main.lua
 ------------------------------------------------
 lua_loadChunksFromZIP() - load zip file: E:\workspace\2048\2048\client\src\res/script/framework_precompiled.zip
 lua_loadChunksFromZIP() - loaded chunks count: 54
-[0.3360] [INFO] 
-[0.3367] [INFO] # DEBUG                        = 1
-[0.3383] [INFO] #
-[0.3398] [INFO] # device.platform              = windows
-[0.3410] [INFO] # device.model                 = unknown
-[0.3424] [INFO] # device.language              = cn
-[0.3458] [INFO] # device.writablePath          = E:\workspace\2048\2048\client\src\\
-[0.3466] [INFO] # device.cachePath             = E:\workspace\2048\2048\client\src\\
-[0.3474] [INFO] # device.directorySeparator    = \
-[0.3480] [INFO] # device.pathSeparator         = ;
-[0.3486] [INFO] #
-[0.3658] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
-[0.3723] [INFO] # CONFIG_SCREEN_WIDTH          = 960.00
-[0.3747] [INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
-[0.3762] [INFO] # display.widthInPixels        = 960.00
-[0.3805] [INFO] # display.heightInPixels       = 640.00
-[0.3820] [INFO] # display.contentScaleFactor   = 1.00
-[0.3835] [INFO] # display.width                = 960.00
-[0.3929] [INFO] # display.height               = 640.00
-[0.3965] [INFO] # display.cx                   = 480.00
-[0.3981] [INFO] # display.cy                   = 320.00
-[0.3995] [INFO] # display.left                 = 0.00
-[0.4010] [INFO] # display.right                = 960.00
-[0.4024] [INFO] # display.top                  = 640.00
-[0.4038] [INFO] # display.bottom               = 0.00
-[0.4054] [INFO] # display.c_left               = -480.00
-[0.4068] [INFO] # display.c_right              = 480.00
-[0.4082] [INFO] # display.c_top                = 320.00
-[0.4097] [INFO] # display.c_bottom             = -320.00
-[0.4112] [INFO] #
-[0.4890] [INFO] Scene "BaseScene:onEnter()"
-[2.0104] 加载进度：, 50
-[2.0270] 加载进度：, 100
-[2.2551] [INFO] Scene "BaseScene:onExit()"
-[2.2563] [INFO] ----------------------------------------
-[2.2586] [INFO] LUA VM MEMORY USED: 2206.77 KB
+[0.2776] [INFO] 
+[0.2784] [INFO] # DEBUG                        = 1
+[0.2793] [INFO] #
+[0.2804] [INFO] # device.platform              = windows
+[0.2812] [INFO] # device.model                 = unknown
+[0.2821] [INFO] # device.language              = cn
+[0.2831] [INFO] # device.writablePath          = E:\workspace\2048\2048\client\src\\
+[0.2848] [INFO] # device.cachePath             = E:\workspace\2048\2048\client\src\\
+[0.2866] [INFO] # device.directorySeparator    = \
+[0.2889] [INFO] # device.pathSeparator         = ;
+[0.2895] [INFO] #
+[0.2934] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
+[0.2944] [INFO] # CONFIG_SCREEN_WIDTH          = 960.00
+[0.2955] [INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
+[0.2965] [INFO] # display.widthInPixels        = 960.00
+[0.2976] [INFO] # display.heightInPixels       = 640.00
+[0.2986] [INFO] # display.contentScaleFactor   = 1.00
+[0.2996] [INFO] # display.width                = 960.00
+[0.3006] [INFO] # display.height               = 640.00
+[0.3017] [INFO] # display.cx                   = 480.00
+[0.3028] [INFO] # display.cy                   = 320.00
+[0.3039] [INFO] # display.left                 = 0.00
+[0.3059] [INFO] # display.right                = 960.00
+[0.3072] [INFO] # display.top                  = 640.00
+[0.3083] [INFO] # display.bottom               = 0.00
+[0.3095] [INFO] # display.c_left               = -480.00
+[0.3103] [INFO] # display.c_right              = 480.00
+[0.3114] [INFO] # display.c_top                = 320.00
+[0.3125] [INFO] # display.c_bottom             = -320.00
+[0.3134] [INFO] #
+[0.3711] [INFO] Scene "BaseScene:onEnter()"
+[1.8951] 加载进度：, 50
+[1.9117] 加载进度：, 100
+[2.1342] [INFO] Scene "BaseScene:onExit()"
+[2.1357] [INFO] ----------------------------------------
+[2.1379] [INFO] LUA VM MEMORY USED: 2208.74 KB
 cocos2d: "cc_fps_images" rc=4 id=2 256 x 32 @ 16 bpp => 16 KB
 cocos2d: "E:\workspace\2048\2048\client\src\\res/image/Button02.png" rc=177 id=1 88 x 78 @ 32 bpp => 26 KB
 cocos2d: "cc_2x2_white_image" rc=2 id=3 2 x 2 @ 32 bpp => 0 KB
 cocos2d: CCTextureCache dumpDebugInfo: 3 textures, for 42 KB (0.04 MB)
-[2.2693] [INFO] ----------------------------------------
-[2.2744] [INFO] Scene "BaseScene:onEnter()"
-[3.8717] 位置：, 14, 移动步数：, 0
-[3.8750] 位置：, 10, 移动步数：, 0
-[3.8763] 向左
-[3.8786] 创建新的格子, 14
-[3.8814] 创建新的格子, nil
-[8.4105] 位置：, 2, 移动步数：, 0
-[8.4124] 向左
-[8.4147] 创建新的格子, 13
-[8.4174] 创建新的格子, nil
-[10.0059] 位置：, 2, 移动步数：, 0
-[10.0073] 向左
-[10.0092] 创建新的格子, 13
-[10.0110] 创建新的格子, nil
-[10.4988] [INFO] LUA VM MEMORY USED: 2233.26 KB
-[11.5011] 位置：, 13, 移动步数：, 0
-[11.5031] 向左
-[11.5054] 创建新的格子, 13
-[11.5079] 创建新的格子, nil
-[20.5051] [INFO] LUA VM MEMORY USED: 2239.48 KB
-[21.4832] [INFO] Scene "BaseScene:onExit()"
-[21.4846] [INFO] ----------------------------------------
-[21.4869] [INFO] LUA VM MEMORY USED: 2239.58 KB
+[2.1498] [INFO] ----------------------------------------
+[2.1561] [INFO] Scene "BaseScene:onEnter()"
+[3.4136] 位置：, 14, 移动步数：, 0
+[3.4156] 位置：, 5, 移动步数：, 0
+[3.4166] 向左
+[3.4178] 创建新的格子, 14
+[3.4192] 创建新的格子, nil
+[4.5664] 向右
+[4.5724] 位置：, 12, 移动步数：, 0
+[4.5744] 位置：, 4, 移动步数：, 0
+[4.5754] 创建新的格子, 13
+[4.5768] 创建新的格子, nil
+[5.8667] 位置：, 15, 移动步数：, 0
+[5.8686] 位置：, 9, 移动步数：, 0
+[5.8708] 位置：, 11, 移动步数：, 0
+[5.8723] 位置：, 7, 移动步数：, 0
+[5.8734] 向左
+[5.8749] 创建新的格子, 13
+[5.8763] 创建新的格子, nil
+[7.0789] 向右
+[7.0825] 位置：, 12, 移动步数：, 0
+[7.0866] 位置：, 8, 移动步数：, 0
+[7.0919] 位置：, 4, 移动步数：, 0
+[7.0945] 创建新的格子, 13
+[7.0972] 创建新的格子, nil
+[8.2841] 位置：, 15, 移动步数：, 0
+[8.2866] 位置：, 11, 移动步数：, 0
+[8.2886] 位置：, 7, 移动步数：, 0
+[8.2905] 位置：, 3, 移动步数：, 0
+[8.2928] 向左
+[8.2946] 创建新的格子, 12
+[8.2958] 创建新的格子, nil
+[9.7837] [INFO] Scene "BaseScene:onExit()"
+[9.7843] [INFO] ----------------------------------------
+[9.7853] [INFO] LUA VM MEMORY USED: 2265.14 KB
 cocos2d: "cc_fps_images" rc=4 id=2 256 x 32 @ 16 bpp => 16 KB
 cocos2d: "E:\workspace\2048\2048\client\src\\res/image/Button02.png" rc=177 id=1 88 x 78 @ 32 bpp => 26 KB
 cocos2d: "cc_2x2_white_image" rc=1 id=3 2 x 2 @ 32 bpp => 0 KB
 cocos2d: CCTextureCache dumpDebugInfo: 3 textures, for 42 KB (0.04 MB)
-[21.4977] [INFO] ----------------------------------------
+[9.7927] [INFO] ----------------------------------------
 cocos2d: CCTextureCache: texture: cc_fps_images
 cocos2d: CCTextureCache: texture: E:\workspace\2048\2048\client\src\\res/image/Button02.png
 cocos2d: CCTextureCache: texture: cc_2x2_white_image
