@@ -97,9 +97,10 @@ function FightController:createNewTile()
 			
 			--测试新各自
 			if self.flagSpt_ then self.flagSpt_:removeSelf() end
-			 self.flagSpt_=display.newCircle(5);
-	         self.flagSpt_ :align(display.LEFT_BOTTOM,30,30 )
+			 self.flagSpt_=display.newSprite("image/achievement.png")
+	         self.flagSpt_ :align(display.LEFT_BOTTOM,0,0 )
 	        oneTile.sprite_ :addChild( self.flagSpt_);
+	        self.flagSpt_:setScale(0.5);
 		end
 	end
 end
