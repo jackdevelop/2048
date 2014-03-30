@@ -149,6 +149,7 @@ function ObjectViewBehavior:bind(object)
 --	        transition.moveTo(object.sprite1_, {x=10   ,y = 500,time = 0.2 })
 	    else
 	    	object.sprite_:setButtonLabelString(toint(number))
+	    	object.sprite_:set
 	    end
 	 end
 	 object:bindMethod(self, "setButtonLabel", setButtonLabel)
