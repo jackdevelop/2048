@@ -13,7 +13,7 @@ function FightScene:ctor()
 ----	param.width = levelData.width;
 ----	param.height = display.height;
 --	param.batchNodeImage = levelData.batchNodeImage;
-	FightScene.super.ctor(self)
+	FightScene.super.ctor(self,param)
 --    GameUtil.spriteFullScreen(self.backgroundSprite_)
 --    http://gabrielecirulli.github.io/2048/
 	 self.sptArr_ = {};
