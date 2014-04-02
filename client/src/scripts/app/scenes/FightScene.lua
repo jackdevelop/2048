@@ -1,4 +1,4 @@
---[[
+﻿--[[
 战斗场景
 ]]
 local BaseScene = require("engin.mvcs.view.BaseScene")
@@ -9,7 +9,7 @@ local FightScene = class("FightScene", BaseScene)
 function FightScene:ctor()
 	
 --	param.sceneSound = GameSoundProperties[levelData.sceneSound](); --GameSoundProperties.bg_sound();
---	param.backgroundImageName = levelData.backgroundImageName;
+	param.backgroundImageName = "sound/bg.mp3";--levelData.backgroundImageName;
 ----	param.width = levelData.width;
 ----	param.height = display.height;
 --	param.batchNodeImage = levelData.batchNodeImage;
