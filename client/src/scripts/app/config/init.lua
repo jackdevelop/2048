@@ -29,4 +29,7 @@ BehaviorClassProperties = require("app.config.properties.BehaviorClassProperties
 
 
 
-
+TOUCH_MOVED_UP = "TOUCH_MOVED_UP"
+TOUCH_MOVED_DOWN = "TOUCH_MOVED_DOWN"
+TOUCH_MOVED_RIGHT = "TOUCH_MOVED_RIGHT"
+TOUCH_MOVED_LEFT = "TOUCH_MOVED_LEFT"

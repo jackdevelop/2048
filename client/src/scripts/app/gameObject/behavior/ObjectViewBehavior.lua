@@ -131,7 +131,7 @@ function ObjectViewBehavior:bind(object)
 		}
 	 	object.sprite_ =  cc.ui.UICheckBoxButton.new(loginButtonParam)
 	 	
-	        :setButtonLabel(cc.ui.UILabel.new({text = number, size = 40,  color = display.COLOR_BLACK}))
+	        :setButtonLabel(cc.ui.UILabel.new({text = number, size = 24,  color = display.COLOR_WHITE}))
 	        --:setButtonLabelOffset(0, 40)
 	        :setButtonEnabled(false)
 	        :setButtonLabelAlignment(display.CENTER)
@@ -146,19 +146,9 @@ function ObjectViewBehavior:bind(object)
 	        :addTo(object.batch_)
 	        
 	        
-	       
 --	        transition.moveTo(object.sprite1_, {x=10   ,y = 500,time = 0.2 })
 	    else
 	    	object.sprite_:setButtonLabelString(toint(number))
---	    	object.sprite_:setButtonLabel(cc.ui.UILabel.new({text = number, size = 24,  color = display.COLOR_WHITE}))
---	    	object.sprite_:set
-	    end
-	    
-	    
-	    if toint(number)==0 then
-	    	object.sprite_:setVisible(false);
-	    else
-	    	object.sprite_:setVisible(true);
 	    end
 	 end
 	 object:bindMethod(self, "setButtonLabel", setButtonLabel)
