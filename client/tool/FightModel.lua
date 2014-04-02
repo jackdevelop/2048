@@ -1,7 +1,4 @@
---
--- Author: Ace
--- Date: 2014-03-23 22:04:56
---
+
 local GameModel = class("GameModel",cc.mvc.ModelBase)
 
 GameModel.FLASH_EVENT	= "FLASH_EVENT"
