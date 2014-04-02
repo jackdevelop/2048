@@ -170,27 +170,23 @@ end
 --	触摸事件 
 --]]
 function FightScene:onTouch(event, x, y)
---	if true then return end
-	
 	if event == "began" then
 		self.startX_ = x;
 		self.startY_ = y;
 	elseif event == "ended" then
 		
+		if Math2d.dist(self.startX_, self.startY_, x, y) < 30 then 
+			return 
+		end
+		
 		
 		local radians = Math2d.radians4point(self.startX_, self.startY_, x, y);--弧度
 		if radians > -0.5 and radians < 0.5 then --向右
-		 echoj("向右");
-			
 			self.model_:move(TOUCH_MOVED_DOWN);
 		elseif radians > 1 and radians < 2 then --向下
-		 echoj("向下");
 			self.model_:move(TOUCH_MOVED_LEFT);
---			self.model_:move(TOUCH_MOVED_RIGHT);
 		elseif radians > -2.5 and radians < -1 then --向上
-		 echoj("向上");
 		 	self.model_:move(TOUCH_MOVED_RIGHT);
---			self.model_:move(TOUCH_MOVED_UP);
 		elseif radians > 2.5 or radians < -2.5 then --向左
 			self.model_:move(TOUCH_MOVED_UP);
 		end
